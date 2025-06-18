@@ -1,0 +1,10 @@
+﻿namespace WinUI3App1C__
+{
+	[default_interface]
+	runtimeclass MainWindow : Microsoft.UI.Xaml.Window
+	{
+		MainWindow();
+	//C++/WinRT 使用这个 IDL 定义生成了用于投影的中间代码，使得 collection() 方法成为 XAML 和 C++ 之间的桥梁。
+		Windows.Foundation.Collections.IObservableVector<String> collection{ get; };
+	}
+}

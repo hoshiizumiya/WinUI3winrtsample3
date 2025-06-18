@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Window
+    x:Class="WinUI3App1C__.BlankWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:WinUI3App1C__"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="SampleWindow"
+    mc:Ignorable="d">
+    <Page>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <NavigationView
+                x:Name="nvSample8"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                Width="auto"
+                IsTabStop="False"
+                PaneDisplayMode="Left">
+                <NavigationView.MenuItems>
+                    <NavigationViewItem
+                        Content="Home"
+                        Icon="Home"
+                        Tag="SamplePage1"
+                        ToolTipService.ToolTip="Home" />
+
+
+
+                    <NavigationViewItem
+                        Content="Account"
+                        Icon="Contact"
+                        Tag="SamplePage2"
+                        ToolTipService.ToolTip="Account">
+                        <NavigationViewItem.MenuItems>
+                            <NavigationViewItem
+                                Content="Mail"
+                                Icon="Mail"
+                                Tag="SamplePage3"
+                                ToolTipService.ToolTip="Mail" />
+                            <NavigationViewItem
+                                Content="Calendar"
+                                Icon="Calendar"
+                                Tag="SamplePage4"
+                                ToolTipService.ToolTip="Calendar" />
+                        </NavigationViewItem.MenuItems>
+                    </NavigationViewItem>
+                    <NavigationViewItem
+                        Content="Document options"
+                        Icon="Page2"
+                        SelectsOnInvoked="False"
+                        ToolTipService.ToolTip="Document options">
+                        <NavigationViewItem.MenuItems>
+                            <NavigationViewItem
+                                Content="Create new"
+                                Icon="NewFolder"
+                                Tag="SamplePage5"
+                                ToolTipService.ToolTip="Create new" />
+                            <NavigationViewItem
+                                Content="Upload file"
+                                Icon="OpenLocal"
+                                Tag="SamplePage6"
+                                ToolTipService.ToolTip="Upload file" />
+                        </NavigationViewItem.MenuItems>
+                    </NavigationViewItem>
+                </NavigationView.MenuItems>
+                <Frame x:Name="contentFrame8" />
+            </NavigationView>
+
+            <TextBox Grid.Column="1" Header="textboxview" />
+
+
+
+        </Grid>
+    </Page>
+
+</Window>
